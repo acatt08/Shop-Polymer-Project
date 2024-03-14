@@ -1,0 +1,17 @@
+*Technologies used: Selenium in Java, TestNG, Cucumber
+
+* To run test you need to run 'TestRuner.java'(right click, click Run)(path: src/test/java/com.example/TestRunner.java)
+* In 'TestRunner.java' you need to put path to cucumber test you want to execute(by default I put path to PlaceOrderFlows.feature)
+* If you have time limitation on what tests to check, I suggest checking chronologically:
+
+CheckoutPage.java(src/main/java/pages), 
+CheckoutStepDefs.java(src/test/java/com.example/StepDefs) and 
+PlaceOrderFlows.feature(src/test/resources/features)
+
+* These test above I wrote most recently and with best practices that I know, some other files might contain bad practices but I didn't have time to fix them
+
+* One thing I wanted to do but didn't have time is cross browser testing - currently all test are run on Chrome browser.
+But that can manuelly be changed in WebDriverFactory.java(path: main/java/factory) in getWebDriver() method just initiate firefox or any other browser insted of chrome
+
+* Also some tests might fail due to wait issues, I didn't have time to fix them all(on some places I even used Thread.sleep() which is a bad practice)
+
